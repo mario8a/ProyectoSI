@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Detalles
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="full">
+
+        <!-- CAMPO1 -->
+        <ion-item *ngIf="dato">
+            <ion-input required type="text" placeholder="campo1" [(ngModel)]="dato.campo1">
+
+            </ion-input>
+        </ion-item>
+
+        <!-- CAMPO2 -->
+        <ion-item *ngIf="dato">
+            <ion-input required type="text" placeholder="campo1" [(ngModel)]="dato.campo2">
+
+            </ion-input>
+        </ion-item>
+
+        <!-- CAMPO3 -->
+        <ion-item *ngIf="dato">
+            <ion-input required type="text" placeholder="campo1" [(ngModel)]="dato.campo3">
+
+            </ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="dato">
+            <ion-input required type="number" placeholder="prioridad" [(ngModel)]="dato.priority">
+
+            </ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-button expand="full" (click)="saveDato()">
+        Save
+    </ion-button>
+
+    <!-- Boton para eliminar -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+        <ion-fab-button color="danger" routerLink="/app/user/tabs/tab2" routerDirection="forward" (click)="onRemove(datoId)">
+            <ion-icon name="trash"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

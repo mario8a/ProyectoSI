@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button [routerLink]="'/perfil/'" routerDirection="forward">
+                <ion-icon name="contact" size="large"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>
+            Crud firebase
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="let dato of datos">
+            <ion-item lines="inset" button [routerLink]="['/datas', dato.id]">
+                <ion-label>
+                    {{dato.campo1}}
+                </ion-label>
+            </ion-item>
+            <ion-item-options side="end">
+                <ion-item-option (click)="onDelete(item)" color="secondary">
+                    <ion-icon name="checkmark" slot="end"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+
+    <!-- Boton para agregar -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button routerLink="/datas" routerDirection="forward">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
