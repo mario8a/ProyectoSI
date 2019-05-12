@@ -5,7 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-   
+    apiKey: "AIzaSyDTb5bmSjW7rtyC_RDmldihvt67Grvfs7I",
+    authDomain: "citihack-8a0e7.firebaseapp.com",
+    databaseURL: "https://citihack-8a0e7.firebaseio.com",
+    projectId: "citihack-8a0e7",
+    storageBucket: "citihack-8a0e7.appspot.com",
+    messagingSenderId: "1047549022519",
+    appId: "1:1047549022519:web:e4c8d502d5122490"
   }
 };
 

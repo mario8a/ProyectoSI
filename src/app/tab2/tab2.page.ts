@@ -19,4 +19,9 @@ export class Tab2Page implements OnInit {
       this.datos = res;
     });
   }
+
+  onDelete(item: string) {
+    console.log('Data', item);
+    //this.datosService.deleteDato(item);
+  }
 }

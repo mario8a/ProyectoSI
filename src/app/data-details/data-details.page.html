@@ -11,29 +11,51 @@
 
         <!-- CAMPO1 -->
         <ion-item *ngIf="dato">
-            <ion-input required type="text" placeholder="campo1" [(ngModel)]="dato.campo1">
+            <ion-input required type="text" placeholder="Tarea" [(ngModel)]="dato.campo1">
 
             </ion-input>
         </ion-item>
 
         <!-- CAMPO2 -->
         <ion-item *ngIf="dato">
-            <ion-input required type="text" placeholder="campo1" [(ngModel)]="dato.campo2">
+            <!-- <ion-input required type="text" placeholder="Descripcion" [(ngModel)]="dato.campo2">
+            </ion-input>-->
 
-            </ion-input>
+            <ion-label position="floating">Description</ion-label>
+            <ion-textarea required type="text" placeholder="Enter your task description" [(ngModel)]="dato.campo2"></ion-textarea>
         </ion-item>
 
         <!-- CAMPO3 -->
         <ion-item *ngIf="dato">
-            <ion-input required type="text" placeholder="campo1" [(ngModel)]="dato.campo3">
 
-            </ion-input>
+            <ion-label>Tipo de tarea</ion-label>
+            <ion-select placeholder="Select One" [(ngModel)]="dato.campo3">
+                <ion-select-option value="Escolar">Escolar</ion-select-option>
+                <ion-select-option value="Domestica">Domestica</ion-select-option>
+                <ion-select-option value="Trabajo">Trabajo</ion-select-option>
+                <ion-select-option value="Pendiente">Pendiente</ion-select-option>
+                <ion-select-option value="Actividad">Actividad</ion-select-option>
+            </ion-select>
+
+            <!-- <ion-input required type="text" placeholder="campo1" [(ngModel)]="dato.campo3">
+
+            </ion-input>-->
         </ion-item>
 
         <ion-item *ngIf="dato">
-            <ion-input required type="number" placeholder="prioridad" [(ngModel)]="dato.priority">
 
-            </ion-input>
+            <ion-label>Prioridad</ion-label>
+            <ion-select placeholder="Select One" [(ngModel)]="dato.priority">
+                <ion-select-option value="1">1</ion-select-option>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option>
+            </ion-select>
+
+            <!--<ion-input required type="number" placeholder="prioridad" [(ngModel)]="dato.priority">
+
+            </ion-input>-->
         </ion-item>
 
     </ion-list>

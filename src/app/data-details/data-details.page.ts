@@ -15,7 +15,7 @@ export class DataDetailsPage implements OnInit {
     campo1: '',
     campo2: '',
     campo3: '',
-    priority: 0
+    priority: ''
   };
 
   datoId = null;

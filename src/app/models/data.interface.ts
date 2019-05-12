@@ -5,5 +5,5 @@ export interface DatoInter {
     campo1: string;
     campo2: string;
     campo3: string;
-    priority: number;
+    priority: string;
 }
