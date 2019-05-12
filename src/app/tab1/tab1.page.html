@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="dark">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -14,7 +14,30 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="fondo">
+
+    <h1>Graficas</h1>
+
+
+    <ion-card color="light">
+        <ion-card-header>
+            <ion-card-title>Estadistica semanal</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <div>
+                <div>
+                    <div style="display: block">
+                        <canvas baseChart [datasets]="radarChartData" [options]="radarChartOptions" [labels]="radarChartLabels" [chartType]="radarChartType">
+                                </canvas>
+                    </div>
+                </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+
+
 
 
 </ion-content>

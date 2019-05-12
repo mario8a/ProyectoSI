@@ -19,6 +19,7 @@ import {AngularFirestoreModule} from 'angularfire2/firestore';
 import { ChartsModule } from 'ng2-charts';
 
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

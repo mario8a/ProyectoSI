@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="dark">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -14,9 +14,9 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="fondo">
 
-    <ion-card *ngFor="let dato of datos" button [routerLink]="['/datas', dato.id]">
+    <ion-card color="light" *ngFor="let dato of datos" button [routerLink]="['/datas', dato.id]">
         <ion-card-header>
             <ion-grid>
                 <ion-row>
@@ -24,21 +24,29 @@
                         <ion-card-title>{{dato.campo1}}</ion-card-title>
                     </ion-col>
                     <ion-col size="4">
-                        <ion-card-subtitle>Prioridad: {{dato.priority}}</ion-card-subtitle>
+                        <ion-card-subtitle>
+                            <ion-badge color="tertiary">Prioridad: {{dato.priority}}</ion-badge>
+                        </ion-card-subtitle>
+
                     </ion-col>
                 </ion-row>
             </ion-grid>
         </ion-card-header>
 
         <ion-card-content>
-            <h3>{{dato.campo2}}</h3>
-            <h3 style="text-align: right; color: rgb(4, 124, 14)">{{dato.campo3}}</h3>
+            <ion-text color="dark">
+                <h3>{{dato.campo2}}</h3>
+            </ion-text>
+            <h3 style="text-align: right;">
+                <ion-badge color="primary">{{dato.campo3}}</ion-badge>
+            </h3>
+
         </ion-card-content>
     </ion-card>
 
     <!-- Boton para agregar -->
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button routerLink="/datas" routerDirection="forward">
+        <ion-fab-button color="success" routerLink="/datas" routerDirection="forward">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
